@@ -1,0 +1,35 @@
+.item {
+	background-color: green;
+	list-style-type: none;
+	text-align: center;
+	padding: 1em 1em;
+	margin: 0.5em 05em;
+	font-size: 1.5em
+}
+
+.button {
+	background-color: blue;
+	text-align: center;
+	padding: 1em 1em;
+	margin: 0.5em 0.5em;
+	font-size: 1.5em;
+	width: 5em;
+}
+
+.rmv {
+	background-color: green;
+	list-style-type: none;
+	text-align: center;
+	padding: 0.5em 1em;
+	margin: 0.5em 05em;
+	font-size: 1.5em
+}
+
+.check {
+	background-color: green;
+	list-style-type: none;
+	text-align: center;
+	padding: 0.5em 1em;
+	margin: 0.5em 05em;
+	font-size: 1.5em
+}
