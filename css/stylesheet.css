@@ -8,6 +8,7 @@
 }*/
 
 .button {
+	position:relative;
 	font-size: 4em;
 	color: #ffffff;
 	background-color: steelblue;
@@ -21,6 +22,8 @@
 
 h1 {
 	font-family: 'Ubuntu';
+	width: 500px;
+	top: 50%;
 }
 .check {
 	height: 2em;

@@ -1,5 +1,6 @@
 /*
 tasks:
+make input within page
 make responsive
 align text
 add check image
@@ -11,15 +12,15 @@ $(document).ready(function() {
 		var text = prompt("New Item:");
 		$("#groceries").append(
 			//$('<li>').attr({'id': text, 'class':'item'}).append(text)
-			"<div class='"+text+"'><div class='check unchecked'></div><div class='item'>"+text+"</div><div class='rmv'>remove</div></div>"
+			"<div class='"+text+"'><div class='check unchecked'>check</div><div class='item'>"+text+"</div><div class='rmv'>remove</div></div>"
 			//"<div class='check "+text+"'><input type='checkbox'></li>",
 			//"<div class='item "+text+"'>"+text+"</li>",
 			//"<div class='rmv "+text+"'>remove</li>",
 		);
 		$('.'+text).children().css("display", "table");
-		$('.'+text).children('.check').css({"position": "absolute", "top": "50%","left": "0%"});
-		$('.'+text).children('.item').css({"position": "absolute", "top": "50%","left": "50%"});
-		$('.'+text).children('.rmv').css({"position": "absolute", "top": "50%","left": "100%"});
+		$('.'+text).children('.check').css({"position": "absolute", "top": "50%","left": "0%", "margin-left": "1em", "margin-top": "-0.5em"});
+		$('.'+text).children('.item').css({"position": "absolute", "top": "50%","left": "50%", "margin-left": "-1em", "margin-top": "-0.5em"});
+		$('.'+text).children('.rmv').css({"position": "absolute", "top": "50%","left": "100%", "margin-left": "-5em", "margin-top": "-0.5em"});
 		$('.'+text).css("margin", "1em");
 		$('.'+text).css("border-radius", "1.5em");
 		$('.'+text).css("font-family", "'Ubuntu'");
@@ -46,16 +47,19 @@ $(document).ready(function() {
 		var myClass = $(this).parent().attr('class');
 		console.log(this);
 		if($(this).hasClass("checked")) {
+			$(this).text("check");
 			$(this).removeClass("checked");
 			$('.'+myClass).css("background-color", "steelblue");
 			$(this).addClass("unchecked");
 		}
 		else if($(this).hasClass("unchecked")) {
+			$(this).text("uncheck");
 			$(this).removeClass("unchecked");
 			$('.'+myClass).css("background-color", "crimson");
 			$(this).addClass("checked")
 		}
 		else {
+			$(this).text("check");
 			$(this).addClass("checked");
 		}
 
